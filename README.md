@@ -5,7 +5,7 @@ Modular Networks aim to provide an alternativy to tecnique like Distillation in 
 
 ## The model and training
 
-The type of modular networks I implement is Early Exit over a VGG13 model in Tensorflow Keras for image classification given the [flower](https://www.tensorflow.org/datasets/catalog/tf_flowers) dataset. More specifically I add fixed early exits in the previous architecture and train the new model with a Joint Cross Entropy loss using all the early exit prediction and the final one. Inference is done by a thresholding operation on the entropy of the early exit layer  e  that ensure if exit early or continue. The Early-Exit layer is a small classifier of two sequential layer: convolution and a fully connected one. The early exit branch are implemented after every convolutional block in the model, for a total of 5, in order to explore more this modular architecture.
+The type of modular networks I implement is Early Exit over a VGG11 model from scratch in Tensorflow Keras for image classification given the [flower](https://www.tensorflow.org/datasets/catalog/tf_flowers) dataset. More specifically I add fixed early exits in the previous architecture and train the new model with a Joint Cross Entropy loss using all the early exit prediction and the final one. Inference is done by a thresholding operation on the entropy of the early exit layer  e  that ensure if exit early or continue. The Early-Exit layer is a small classifier of two sequential layer: convolution and a fully connected one. The early exit branch are implemented after every convolutional block in the model, for a total of 5, in order to explore more this modular architecture.
 
 ## References 
 
